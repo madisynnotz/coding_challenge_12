@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>cc_12 JavaScript DOM Manipulation and Event Handling Challenge – Interactive Business Dashboard</title>
 </head>
 <body>
 
     <h1>cc_12 JavaScript DOM Manipulation and Event Handling Challenge – Interactive Business Dashboard</h1>
     <p>Open the console to see the JavaScript output.</p>
+    <div id="Dashboard"></div>
+    <div class="metric-card"></div>
 
-    <script src="cc_12.js"></script>
+    <div class="metric-card"></div>
+    <h2>Profit</h2>
+    <p>$0</p>
+</div>
+    <div>class="metric-card"</div>
+    <h2>Expenses</h2>
+    <p>$0</p>
+    </div>
+    
+<h3>Inventory Managment</h3>
+<button id="addProductButton">Add addProductButton</button>
+<ul id="InventoryList"></ul>
+<script src="cc_12.js"></script>
 
 </body>
 </html>
