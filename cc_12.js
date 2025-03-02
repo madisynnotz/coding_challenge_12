@@ -10,3 +10,12 @@ revenueCard.setAttribute("id", "revenueCard");
 revenueCard.innerHTML = "<h3>Revenue</h3><p>$0</p>";
  
 dashboard.appendChild(revenueCard);
+
+	// Task 2: Updating Dashboard Metrics – Working with NodeLists and Arrays
+    const metricCards = document.querySelectorAll(".metric-card");
+    const metricArray = Array.from(metricCards);
+     
+    metricArray.forEach(card => {
+        card.innerHTML += " - Updated";
+        card.style.backgroundColor = "lightblue";
+    });
