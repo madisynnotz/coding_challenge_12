@@ -41,3 +41,28 @@ function addProduct(name) {
 addProduct("Laptop");
 addProduct("Monitor");
 addProduct("Keyboard");
+
+	// Task 4: Business Customer Section – Handling Event Bubbling
+    const customerSection = document.getElementById("customerSection");
+ 
+    // Example customer cards
+    document.body.onload = () => {
+        for (let i = 1; i <= 3; i++) {
+            const customerCard = document.createElement("div");
+            customerCard.setAttribute("class", "customer-card");
+            customerCard.innerText = "Customer " + i;
+     
+            // Prevent event bubbling
+            customerCard.addEventListener("click", function (event) {
+                console.log("Customer card clicked");
+                event.stopPropagation();
+            });
+     
+            customerSection.appendChild(customerCard);
+        }
+    };
+     
+    // Parent container event listener to test event bubbling
+    customerSection.addEventListener("click", function () {
+        console.log("Customer section clicked");
+    });
