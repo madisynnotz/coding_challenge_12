@@ -19,3 +19,25 @@ dashboard.appendChild(revenueCard);
         card.innerHTML += " - Updated";
         card.style.backgroundColor = "lightblue";
     });
+
+// Task 3: Dynamic Inventory Management – Adding and Removing Items
+const inventoryList = document.getElementById("inventoryList");
+ 
+function addProduct(name) {
+    const productItem = document.createElement("li");
+    productItem.setAttribute("class", "product-item");
+    productItem.setAttribute("data-name", name);
+    productItem.innerText = name;
+ 
+    // Add event listener for removal
+    productItem.addEventListener("click", function () {
+        inventoryList.removeChild(productItem);
+    });
+ 
+    inventoryList.appendChild(productItem);
+}
+ 
+// Example: Adding some products
+addProduct("Laptop");
+addProduct("Monitor");
+addProduct("Keyboard");
